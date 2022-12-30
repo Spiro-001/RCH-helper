@@ -1,0 +1,80 @@
+:root {
+  --main-lightest-blue: #E3F2FD;
+  --main-lighter-blue: #BBDEFB;
+  --main-light-blue: #90CAF9;
+  --main-slight-blue: #64B5F6;
+  --main-blue: #42A5F5;
+  --main-blue-2: #2196F3;
+  --main-dlight-blue: #1E88E5;
+  --main-dark-blue: #1976D2;
+  --main-darker-blue: #1565C0;
+  --main-darkest-blue: #0D47A1;
+
+  --main-debug-border: transparent;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: [first] 60px [second] auto [third] 60px [last];
+  grid-template-columns: [first] 60px [second] auto [third] 60px [last];
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.top {
+  grid-row-start: first;
+  grid-column-start: first;
+  grid-row-end: second;
+  grid-column-end: last;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-light-blue);
+}
+
+.left {
+  grid-row-start: second;
+  grid-column-start: first;
+  grid-row-end: third;
+  grid-column-end: second;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, var(--main-slight-blue), var(--main-blue));
+}
+
+.right {
+  grid-row-start: second;
+  grid-column-start: third;
+  grid-row-end: third;
+  grid-column-end: last;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to left, var(--main-slight-blue), var(--main-blue));
+}
+
+.bottom {
+  grid-row-start: third;
+  grid-column-start: first;
+  grid-row-end: last;
+  grid-column-end: last;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-light-blue);
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  grid-row-start: second;
+  grid-column-start: second;
+  grid-row-end: third;
+  grid-column-end: third;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-blue);
+  color: var(--main-lightest-blue);
+}
